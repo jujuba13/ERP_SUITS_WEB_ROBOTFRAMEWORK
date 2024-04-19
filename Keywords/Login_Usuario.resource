@@ -25,6 +25,7 @@ Fechar o navegador
    Click Button                      locator=${Elemento_Button_Entrar} 
 
 6.Verifica se o usuário esta logado 
-  sleep   1
+  sleep   4
+  Wait Until Element Is Visible    locator=${Elemento_Messege_QACoders} 
   Element Should Be Visible    locator=${Elemento_Messege_QACoders} 
    
