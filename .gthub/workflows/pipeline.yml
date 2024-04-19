@@ -1,6 +1,6 @@
 name: ROBOT WEB 
 
-on: push
+on:  workflow_dispatch
 
 job:
   Test: 
