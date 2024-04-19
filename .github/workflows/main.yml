@@ -1,0 +1,32 @@
+name: Robot Web
+
+on: push
+
+jobs:
+  test:
+    name: Test Front run
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v5
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        pip install robotframework-seleniumlibrary
+
+    - name: Run Robot Framework tests
+      run: |
+        robot -d results tests
+
+    - name: Archive Robot Framework results
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: robot-results
+        path: ./results
