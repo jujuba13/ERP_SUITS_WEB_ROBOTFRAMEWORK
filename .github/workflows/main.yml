@@ -5,7 +5,7 @@ on: push
 jobs:
   test:
     name: Test Front run
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
@@ -13,7 +13,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://jujuba13.github.io/ERP_SUITS_WEB_ROBOTFRAMEWORK/report.html
+      url: https://jujuba13.github.io/suits-academy-front-robot/report.html
 
     steps:
     - name: Checkout Repository
@@ -40,13 +40,13 @@ jobs:
         path: ./results
 
     - name: Setup Pages
-      uses: actions/configure-pages@v2
+      uses: actions/configure-pages@v5
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: results/
 
     - name: Deploy to Github Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4
