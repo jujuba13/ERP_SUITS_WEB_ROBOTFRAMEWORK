@@ -5,7 +5,7 @@ Resource      ../Variables/Elemento_Login.resource
 
 *** Keywords ***
 
-Abrir o navegado
+Abrir o navegador
    Open Browser  url=${URL}    browser=${headlesschrome}
 
    Maximize Browser Window
