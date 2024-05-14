@@ -6,7 +6,8 @@ Resource     ../uitils/Settings.resource
 *** Variables ***
 
 ${URL}     https://automacao.qacoders-academy.com.br/login
-${BROWSER}   chrome
+${BROWSER}   chrome 
+${headlesschrome}   headlesschrome
 ${LOGIN}   sysadmin@qacoders.com
 ${SENHA}   1234@Test
 ${Login_Usuario}    mplbhdp5uk@gmail.com

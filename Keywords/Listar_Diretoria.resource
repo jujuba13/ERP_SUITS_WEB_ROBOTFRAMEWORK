@@ -26,7 +26,7 @@ Resource        ../Variables/Elemento_Listar_Diretoria.resource
   Element Should Be Visible    locator=${Elemento_Messege_QACoders} 
 
 
- 11.Listar todo o cadastro da diretoria 
+11.Listar todo o cadastro da diretoria 
 
   Element Should Be Visible    locator=${Elemento_Button_Cadastro} 
   Click Element                locator=${Elemento_Button_Cadastro} 
@@ -47,7 +47,7 @@ Resource        ../Variables/Elemento_Listar_Diretoria.resource
    Element Should Be Visible         locator=${Elemento_Button_MudancaDeListagem}
    Double Click Element              locator=${Elemento_Button_MudancaDeListagem}
 
- 12.Verificar se esta listando toda a diretoria
+12.Verificar se esta listando toda a diretoria
    Element Should Be Visible        locator=${Elemento_Todas_Diretorias}
 
    

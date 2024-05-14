@@ -8,9 +8,7 @@ Resource     ../Variables/Elemento_Cadastro_Diretorias.resource
 
 
 *** Keywords ***
-
-
- 5.Acessando login do usuário com sucesso
+5.Acessando login do usuário com sucesso
 
   Element Should Be Visible       locator=${Elemento_Input_Login}  
   Input Text                       locator=${Elemento_Input_Login}      text=${Login_Usuario}   
@@ -26,8 +24,7 @@ Resource     ../Variables/Elemento_Cadastro_Diretorias.resource
   sleep   2
   Element Should Be Visible    locator=${Elemento_Messege_QACoders} 
   
-
- 7.Criar novo cadastro da Diretorias
+7.Criar novo cadastro da Diretorias
 
    Element Should Be Visible    locator=${Elemento_Button_Cadastro}
     Click Element              locator=${Elemento_Button_Cadastro}

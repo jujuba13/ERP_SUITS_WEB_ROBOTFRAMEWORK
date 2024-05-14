@@ -9,15 +9,14 @@ Resource     ../Variables/Elemento_Login.resource
 
 *** Keywords ***
 Abrir o navegado do browser
-   Open Browser  url=${URL}    browser=${BROWSER}
+   Open Browser  url=${URL}    browser=${headlesschrome}
 
    Maximize Browser Window
    
 Fechar o navegador do browser
    Close Browser
 
-
- 1.Acessar o login com ADMIN 
+1.Acessar o login com ADMIN 
    
   Element Should Be Visible       locator=${Elemento_Input_Login}
   Input Text                       locator=${Elemento_Input_Login}     text=${LOGIN} 

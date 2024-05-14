@@ -71,7 +71,7 @@ Resource       ../Variables/Elemento_Login.resource
     
    #   Sleep    5s
   
- 10.Verificar se o cadastro da diretoria foi atualizado com sucesso
+10.Verificar se o cadastro da diretoria foi atualizado com sucesso
 
   Element Should Be Visible    locator=${Elemento_Validacao}  
 
