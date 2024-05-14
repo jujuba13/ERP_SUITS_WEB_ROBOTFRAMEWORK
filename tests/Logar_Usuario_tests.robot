@@ -1,6 +1,7 @@
-*** Setting ***
+*** Settings ***
 Resource         ../Keywords/Login_Usuario.resource
-Test Setup       Abrir o navegado
+
+Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador 
 
 

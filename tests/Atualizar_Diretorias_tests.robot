@@ -1,4 +1,4 @@
-*** Setting ***
+*** Settings ***
 Resource        ../Keywords/Login_Usuario.resource
 Resource        ../Keywords/Atualizar_Diretoria.resource   
 Test Setup        Abrir o navegador do browser

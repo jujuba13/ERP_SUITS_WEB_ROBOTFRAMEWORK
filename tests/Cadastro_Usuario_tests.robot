@@ -1,4 +1,4 @@
-*** Setting ***
+*** Settings ***
 Resource         ../Keywords/Login_ADMIN.resource
 Resource         ../Keywords/Cadastro_Usuário.resource
 Test Setup       Abrir o navegado do browser
