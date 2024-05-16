@@ -41,7 +41,7 @@ jobs:
 
 
 
- deploy:
+  deploy:
     name: Deploy GitHub Pages 🌐
     runs-on: ubuntu-latest
     if: always()
