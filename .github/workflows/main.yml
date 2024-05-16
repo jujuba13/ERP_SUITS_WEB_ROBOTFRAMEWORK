@@ -1,19 +1,19 @@
 name: Robot Web
 
-on: push
+on: 
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+ 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   test:
     name: Test Front run
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: https://jujuba13.github.io/suits-academy-front-robot/report.html
 
     steps:
     - name: Checkout Repository
@@ -38,15 +38,33 @@ jobs:
       with:
         name: robot-results
         path: ./results
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: results/
-
-    - name: Deploy to Github Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+ deploy:
+    name: Deploy GitHub Pages 🌐
+    runs-on: ubuntu-latest
+    if: always()
+    needs:
+      - test
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: https://juliana-souza-franca.github.io/suits-academy-front-robot/report.html
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+ 
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: robot-framework-report
+ 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./
+ 
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
