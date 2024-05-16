@@ -33,10 +33,12 @@ jobs:
         robot -d results tests
 
     - name: Archive Robot Framework results
+      if: ${{ always() }}
       uses: actions/upload-artifact@v4
       with:
         name: robot-results
         path: ./results
+
 
 
  deploy:
@@ -51,7 +53,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://juliana-souza-franca.github.io/suits-academy-front-robot/report.html
+      url: https://juliana-souza-franca.github.io/suits-academy-front-robot/Report.html
     steps:
       - name: Setup Pages
         uses: actions/configure-pages@v5
