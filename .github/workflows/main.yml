@@ -12,8 +12,8 @@ on:
 
 jobs:
   test:
-     name: Test Front run
-     runs-on: ubuntu-latest
+    name: Test Front run
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
